@@ -1,0 +1,41 @@
+<div class="conteiner transition" >
+    <div class="banner">
+        <h1>Descubrí todos los modelos</h1>
+    </div>
+    <div class="filter">
+      <h4 (click) = "changeUno()">Filtrar por <span><img src="../../../assets/filter/fill-1.png" alt="">
+      </span>
+      <span class="btn-style uno" [ngClass] = "{'active': filtroUno}">
+        <button (click) = "toggleAction(1)" class="active" #botonUno >Todos</button>
+        <button (click) = "toggleAction(2)" #botonDos >Autos</button>
+        <button (click) = "toggleAction(3)" #botonTres >Pickup y Commerciales</button>
+        <button (click) = "toggleAction(4)" #botonCuatro >SUVs y Croossovers</button>
+      </span>
+    </h4>
+
+      <h4 class="orden" (click) = "changeDos()">Ordenar por <span><img src="../../../assets/filter/fill-1.png" alt=""></span>
+        <span class="btn-style ordenar" [ngClass] = "{'active': filtroDos}">
+          <button (click) = "toggleActiontwo(1)" class="active" #btnUno>Nada</button>
+          <button (click) = "toggleActiontwo(2)" #btnDos>De <span>menor a mayor </span>precio</button>
+          <button (click) = "toggleActiontwo(3)"#btnTres>De <span>mayor a menor </span>precio</button>
+          <button (click) = "toggleActiontwo(4)" #btnCuatro>Más <span>nuevos</span> primero</button>
+          <button (click) = "toggleActiontwo(5)" #btnCinco>Más <span>viejos</span> primero</button>
+        </span>
+
+      </h4>
+    </div>
+
+    <hr>
+    <div class="card-container">
+      <div class="card" *ngFor = "let car of result;"  (click)=" toFicha(car.id) ">
+          <h2>{{car.name}}</h2>
+          <h3>{{car.year}} | ${{car.price}}</h3>
+          <img src="../../../assets{{car.photo}}" alt="">
+
+      </div>
+
+  </div>
+
+
+</div>
+<app-footer></app-footer>

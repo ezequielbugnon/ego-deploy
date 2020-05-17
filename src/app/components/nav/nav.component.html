@@ -1,0 +1,49 @@
+<header>
+  <nav>
+    <div class="contenedor-principal">
+      <div class="Logo">
+          <img src="../../../assets/uploads/logo.png" (click)="menu()">
+          <a class="first" [routerLink]="['/modelos']"  [routerLinkActive]="['is-active']">Modelos</a>
+          <a class="second"[routerLink]="['/ficha']" [routerLinkActive]="['is-active']" >Ficha de modelo</a>
+      </div>
+      <div class="burguer" (click)="burguerActive()">
+        <h4>Menu</h4>
+        <img src="../../../assets/gray/gray.png">
+
+      </div>
+    </div>
+    <div class="menu-lista" [ngClass] = "{'active': check }"  >
+        <div class="Cerrar" >
+          <h4 (click)="burguerDisabled()"> Cerrar </h4>
+          <img src="../../../assets/fill/fill-1.png" (click)="burguerDisabled()">
+        </div>
+      <ul id="primer-listado">
+        <li (click)="menu()">Modelos</li>
+        <li>Servicios y Accesorios</li>
+        <li>Financiación</li>
+        <li>Rewiews y Comunidad</li>
+      </ul>
+      <hr>
+      <ul>
+        <li>Toyota Mobility Service</li>
+        <li>Toyota Gazoo Racing</li>
+        <li>Toyota Híbridos</li>
+      </ul>
+      <hr>
+      <ul>
+        <li>Concesionario</li>
+        <li>Test Drive</li>
+        <li>Contacto</li>
+      </ul>
+      <ul>
+        <li>Actividades</li>
+        <li>Servicio al Cliente</li>
+        <li>Ventas Especiales</li>
+        <li>Innovación</li>
+        <li>Prensa</li>
+        <li>Acerca De...</li>
+      </ul>
+
+    </div>
+  </nav>
+</header>

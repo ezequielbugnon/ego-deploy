@@ -1,0 +1,53 @@
+<div class="container-ficha transition" *ngIf="response" >
+
+    <figure class="first-content"  >
+      <img src="../../../assets/uploads/corolla@3x.png" alt="">
+      <div class="contenido">
+      <figcaption>{{ response.name }}</figcaption>
+      <h1>{{ response.title }}</h1>
+      <p>{{response.description}}</p>
+      </div>
+    </figure>
+
+
+      <div class="slider-content">
+        <div class="slider" #slider>
+            <div>
+              <ngx-slick-carousel class="carousel"
+                              #slickModal="slick-carousel"
+                              [config]="slideConfig"
+                              (init)="slickInit($event)"
+                              (breakpoint)="breakpoint($event)"
+                              (afterChange)="afterChange($event)"
+                              (beforeChange)="beforeChange($event)">
+              <div ngxSlickItem *ngFor="let slide of slides"  class="slide">
+                    <img src="{{ slide.img }}" alt="" width="100%">
+
+                    <h3>{{slide.name}}</h3>
+                    <p>{{slide.description}}
+                    </p>
+
+              </div>
+             </ngx-slick-carousel>
+
+
+            </div>
+
+          </div>
+      </div>
+
+
+    <div class="second-content" >
+      <div *ngFor=" let res of response.model_highlights">
+      <img src="../../../assets/uploads/corolla@3x.png" alt="">
+        <div>
+        <h2>{{res.title}}</h2>
+        <p>
+          {{res.content}}
+        </p>
+        </div>
+      </div>
+
+    </div>
+</div>
+<app-footer></app-footer>

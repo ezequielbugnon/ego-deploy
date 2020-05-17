@@ -1,0 +1,29 @@
+footer{
+  height: 50px;
+  background-color: #000000;
+  margin-top: 70px;
+  animation-name: transitionPage;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+
+}
+
+@media (min-width: 720px){
+
+  footer{
+    margin-top: 132px;
+  }
+}
+
+
+
+
+
+@keyframes transitionPage{
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
