@@ -17,11 +17,11 @@ export class ApiEgoService {
 
 
   query():Observable<any>{
-      return this._http.get('//challenge.agenciaego.tech/models');
+      return this._http.get('http://challenge.agenciaego.tech/models');
   }
 
   getOne(id):Observable<any>{
-     return this._http.get('//challenge.agenciaego.tech/models/'+id);
+     return this._http.get('http://challenge.agenciaego.tech/models/'+id);
   }
 
 
